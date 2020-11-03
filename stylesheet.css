@@ -1,0 +1,125 @@
+/* Small devices */
+* {
+    box-sizing: border-box;
+}
+
+html{
+    background-color: rgb(250, 249, 245);
+    
+}
+
+body{
+    font-family: 'Vollkorn', serif;
+
+    color: rgb(66, 11, 38);
+}
+
+
+nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+nav a {
+    text-decoration: none;
+}
+
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* used flexbox here to order the logo and home image which is then overlapped in the larger devices*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.bgimage{
+    border-radius: 25px;
+}
+
+h1, h2{
+    text-decoration: underline;
+}
+
+footer{
+    margin: 1em;
+    font-size: .5em;
+    color: rgb(117, 109, 113)
+}
+/* Medium devices */
+@media (min-width: 40em){
+
+nav {
+    z-index: 2;
+    font-size: 1.1em;
+    border-bottom: 2px solid rgba(187, 167, 156, 0.87);
+    margin-bottom: 10px;
+}
+
+.wrapper{
+    margin-top: 25%;
+}
+.logo{
+    z-index: 2;
+    background-color: rgba(245, 250, 171, 0.87);
+}
+
+.bgimage{
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    top: 10%;
+    right: 10%;
+}
+
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 15px;
+}
+
+.about div{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*used flexbox here to help with the image/text resizing to fit better in larger veiwports*/
+
+.about img{
+    width: 80%;
+    height: 100%;
+}
+
+aside{
+    background-color: rgba(245, 250, 171, 0.87);
+    border: 2px solid rgba(187, 167, 156, 0.87);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+h1{
+    background-color: rgba(238, 202, 183, 0.459);;
+    border-radius: 25px;
+    margin: 0;
+    padding: 5px;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0em;
+}
+
+}
+
+/* Large devices */
+@media (min-width: 70em){
+    /*to be added*/
+}
